@@ -7,6 +7,8 @@ import { FaSunPlantWilt } from 'react-icons/fa6';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import logo from './assets/alpha-logo.png';
+import add from './assets/add1.svg';
+// import feature from './assets/Meteor.png';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -49,8 +51,8 @@ function App() {
               {/* <h1 className='font-logoFont text-[24px]'><span className='font-bold'>Alpha</span> Assignment</h1> */}
               {/* <img className='w-[150px] h-[120px]' src={logo} alt="" /> */}
               <div className='flex space-x-2 items-center'>
-              <img className='w-[150px] h-[120px] text-white' src="https://static.thenounproject.com/png/6752066-200.png" alt="" />
-              <h1 className='text-[26px] font-medium italic p-2'>Alphazimentz</h1>
+                <img className='w-[150px] h-[120px] text-white' src="https://static.thenounproject.com/png/6752066-200.png" alt="" />
+                <h1 className='text-[26px] font-medium italic p-2'>Alphazimentz</h1>
               </div>
             </div>
 
@@ -85,6 +87,7 @@ function App() {
             <div className='font-poppins'>
               <h1 className='text-[64px]  text-white font-medium font-poppins'>Next Gen <span className='text-orange-500 text-shadow-violet'>Assignment</span> Sub<span className='text-red-500 text-shadow-red'>mission</span> Platform</h1>
               <p className='py-5'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt, illo nostrum distinctio <br /> quod iure reprehenderit similique quo nisi voluptatibus. Quod!</p>
+             
               <div className=' space-x-4'>
                 <button className='btn btn-primary shadow-2xl shadow-white '>Submit Asssignment</button>
                 <button className='btn btn-secondary'>Register</button>
@@ -109,6 +112,9 @@ function App() {
               <h1>Texas , US</h1>
               <h1 className='text-white text-[24px]'>Storytelling Workshop</h1>
               <p>Lorem ipsum dolor sit amet. Lorem ipsum .</p>
+              <div>
+                <img className='w-[150px] h-[120px]' src={add} alt="" />
+              </div>
             </div>
             <div className='text-right space-y-2'>
               <h1 className='text-[40px] font-bold text-blue-700 rounded-full  border-1 border-blue-400 '>22</h1>
@@ -142,9 +148,44 @@ function App() {
           </div>
         </div>
         {/* something else starts here */}
-        <div className=' bg-cover bg-hero-image w-full h-screen bg-no-repeat' >
-
+        <div className='bg-cover bg-hero-image w-full h-screen bg-no-repeat flex items-end bg-gray-700 bg-opacity-40 bg-blend-multiply'>
+          <div className='flex justify-between items-start p-8 '>
+            <div className='w-1/2'>
+              <img src={add} alt="" className='w-full h-auto' />
+            </div>
+            <div className='w-1/2 flex flex-col space-y-4'>
+              <div>
+                <h1>Create new assignment</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At libero distinctio pariatur possimus, iste excepturi!</p>
+              </div>
+              <input type="text" className='input input-bordered w-full' placeholder='Input 1' />
+              <input type="text" className='input input-bordered w-full' placeholder='Input 2' />
+              <input type="text" className='input input-bordered w-full' placeholder='Input 3' />
+              <input type="text" className='input input-bordered w-full' placeholder='Input 4' />
+              <select className='select select-bordered w-full'>
+                <option selected>Choose assignment Difficulty</option>
+                <option className='p-2'>Easy</option>
+                <option className='p-2'>Moderate</option>
+                <option className='p-2'>Hard</option>
+              </select>
+            </div>
+          </div>
         </div>
+{/* feature section for the mindblowing web */}
+        <div className='bg-cover bg-feature-image w-full h-screen'>
+          <div className='flex justify-center items-center'>
+            <h1 className='badge bg-blue-900 p-3 uppercase'>features</h1>
+          </div>
+          <div>
+            <h1 className='text-white text-[32px] font-extralight'>Lorem ipsum dolor sit, amet consectetur adipisicing.</h1>
+          </div>
+          <div className='grid grid-cols-1 gap-[24px]'>
+            <div>
+
+            </div>
+          </div>
+        </div>
+
       </div>
     </>
   )

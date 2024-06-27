@@ -16,7 +16,9 @@ export default {
         'text-violet': '2px 2px 5px rgba(138, 43, 226, 0.5)', // Customize the shadow here
       },
       backgroundImage:{
-        'hero-image':'url("https://i.ibb.co/R9k3xqm/layer.png")'
+        'hero-image':'url("https://i.ibb.co/3WrRPTp/waveNew.png")',
+        'support-image':'url("https://nhb-verse-voyage.vercel.app/assets/contact-AWgNooiJ.png")',
+        'feature-image':'url("https://i.ibb.co/GVdCBYj/Meteor-1.png")',
       },
     },
   },
