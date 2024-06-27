@@ -2,15 +2,53 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import { FaLightbulb, FaMoon, FaSearch, FaSun, FaUser } from 'react-icons/fa'
+import { FaExternalLinkAlt, FaLightbulb, FaMoon, FaSearch, FaSun, FaUser } from 'react-icons/fa'
 import { FaSunPlantWilt } from 'react-icons/fa6';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import logo from './assets/alpha-logo.png';
 import add from './assets/add1.svg';
 // import feature from './assets/Meteor.png';
+import analysis from './assets/analysis.svg';
+import { PiStudent } from "react-icons/pi";
+import team from './assets/team.svg';
+import feedback from './assets/feedback.svg';
+import articles from './assets/articles.svg';
+import questions from './assets/questions.png';
+
+import 'tailwindcss/tailwind.css';
+import 'daisyui/dist/full.css';
+
 
 function App() {
+  const [activeIndex, setActiveIndex] = useState(null);
+
+  const toggleAccordion = (index) => {
+    setActiveIndex(activeIndex === index ? null : index);
+  };
+
+  const accordionItems = [
+    {
+      title: "What is the course deadline?",
+      content: "The course deadline is the end of the current semester. Be sure to check the course schedule for exact dates."
+    },
+    {
+      title: "How can I access support sessions?",
+      content: "Support sessions are available online through our platform. You can join live sessions or watch recorded ones at your convenience."
+    },
+    {
+      title: "What should I do if I miss a deadline?",
+      content: "If you miss a deadline, please contact your instructor as soon as possible to discuss possible extensions or alternatives."
+    },
+    {
+      title: "Are there any group projects?",
+      content: "Yes, there are several group projects throughout the course. You will be assigned to a group and given specific instructions and deadlines."
+    },
+    {
+      title: "How are grades calculated?",
+      content: "Grades are calculated based on assignments, quizzes, projects, and participation. Each component has a specific weight in the final grade calculation."
+    }
+  ];
   const [count, setCount] = useState(0);
 
   AOS.init();
@@ -87,7 +125,7 @@ function App() {
             <div className='font-poppins'>
               <h1 className='text-[64px]  text-white font-medium font-poppins'>Next Gen <span className='text-orange-500 text-shadow-violet'>Assignment</span> Sub<span className='text-red-500 text-shadow-red'>mission</span> Platform</h1>
               <p className='py-5'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt, illo nostrum distinctio <br /> quod iure reprehenderit similique quo nisi voluptatibus. Quod!</p>
-             
+
               <div className=' space-x-4'>
                 <button className='btn btn-primary shadow-2xl shadow-white '>Submit Asssignment</button>
                 <button className='btn btn-secondary'>Register</button>
@@ -171,22 +209,129 @@ function App() {
             </div>
           </div>
         </div>
-{/* feature section for the mindblowing web */}
-        <div className='bg-cover bg-feature-image w-full h-screen'>
+        {/* feature section for the mindblowing web */}
+        <div className='bg-cover bg-feature-image w-full h-full p-3 bg-blend-multiply bg-gray-800 bg-opacity-70'>
           <div className='flex justify-center items-center'>
             <h1 className='badge bg-blue-900 p-3 uppercase'>features</h1>
           </div>
           <div>
             <h1 className='text-white text-[32px] font-extralight'>Lorem ipsum dolor sit, amet consectetur adipisicing.</h1>
+            <p className='text-gray-500 text-center'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime quidem quasi laudantium quam facilis suscipit dignissimos non odit voluptatum repellat.</p>
           </div>
-          <div className='grid grid-cols-1 gap-[24px]'>
-            <div>
+          <div className='grid grid-cols-1 gap-[24px] space-y-9'>
+            <div className='flex justify-between items-center px-12'>
+              <div className='w-1/2 space-y-6'>
+                <PiStudent className='w-[45px] h-[45px] border-2 rounded-2xl'></PiStudent>
+                <div className='text-left space-y-3'>
+                  <h1 className='capitalize text-red-500 font-medium text-[18px]'>Learn and Analyse</h1>
+                  <p className='text-gray-500'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum enim odio quis illo facere perspiciatis aspernatur.</p>
+                  <div className='flex space-x-3 items-center'>
+                    <button className='btn btn-primary bg-black text-white shadow-2xl shadow-white'>Get Started </button>
+                    <button className='flex space-x-2 btn btn-secondary'>
+                      <FaExternalLinkAlt></FaExternalLinkAlt>
+                      <h1 className='capitalize'>Learn more</h1>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div className='w-1/2'>
+                <img src={analysis} alt="" />
+              </div>
+            </div>
+            <div className='flex justify-between space-x-6 items-center px-12'>
+
+              <div className='w-1/2'>
+                <img className='text-right' src={team} alt="" />
+              </div>
+              <div className='w-1/2 space-y-6'>
+                <PiStudent className='w-[45px] h-[45px] border-2 rounded-2xl text-right'></PiStudent>
+                <div className='text-right space-y-3'>
+                  <h1 className='capitalize text-red-500 font-medium text-[18px]'>Learn and Analyse</h1>
+                  <p className='text-gray-500'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum enim odio quis illo facere perspiciatis aspernatur.</p>
+                  <div className='flex space-x-3 items-center justify-end'>
+                    <button className='btn btn-primary bg-black text-white shadow-2xl shadow-white'>Get Started </button>
+                    <button className='flex space-x-2 btn btn-secondary'>
+                      <FaExternalLinkAlt></FaExternalLinkAlt>
+                      <h1 className='capitalize'>Learn more</h1>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+
+            </div>
+            <div className='flex justify-between items-center px-12'>
+              <div className='w-1/2 space-y-6'>
+                <PiStudent className='w-[45px] h-[45px] border-2 rounded-2xl'></PiStudent>
+                <div className='text-left space-y-3'>
+                  <h1 className='capitalize text-red-500 font-medium text-[18px]'>Learn and Analyse</h1>
+                  <p className='text-gray-500'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum enim odio quis illo facere perspiciatis aspernatur.</p>
+                  <div className='flex space-x-3 items-center'>
+                    <button className='btn btn-primary bg-black text-white shadow-2xl shadow-white'>Get Started </button>
+                    <button className='flex space-x-2 btn btn-secondary'>
+                      <FaExternalLinkAlt></FaExternalLinkAlt>
+                      <h1 className='capitalize'>Learn more</h1>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div className='w-1/2'>
+                <img src={feedback} alt="" />
+              </div>
+            </div>
+            <div className='flex justify-between space-x-6 items-center px-12'>
+
+              <div className='w-1/2'>
+                <img src={articles} alt="" />
+              </div>
+              <div className='w-1/2 space-y-6'>
+                <PiStudent className='w-[45px] h-[45px] border-2 rounded-2xl'></PiStudent>
+                <div className='text-left space-y-3'>
+                  <h1 className='capitalize text-red-500 font-medium text-[18px]'>Learn and Analyse</h1>
+                  <p className='text-gray-500'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum enim odio quis illo facere perspiciatis aspernatur.</p>
+                  <div className='flex space-x-3 items-center'>
+                    <button className='btn btn-primary bg-black text-white shadow-2xl shadow-white'>Get Started </button>
+                    <button className='flex space-x-2 btn btn-secondary'>
+                      <FaExternalLinkAlt></FaExternalLinkAlt>
+                      <h1 className='capitalize'>Learn more</h1>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
 
             </div>
           </div>
         </div>
-
+        <div className='flex justify-between items-center'>
+          <div>
+            <img src={questions} alt="" />
+          </div>
+          <div className="container mx-auto py-12">
+            <h2 className="text-3xl font-bold text-center mb-8">Frequently Asked Questions</h2>
+            <div className="space-y-4">
+              {accordionItems.map((item, index) => (
+                <div
+                  key={index}
+                  className={`collapse collapse-arrow border border-base-300 bg-base-100 rounded-box ${activeIndex === index ? 'collapse-open' : 'collapse-close'
+                    }`}
+                  onClick={() => toggleAccordion(index)}
+                >
+                  <div className="collapse-title text-xl font-medium">
+                    {item.title}
+                  </div>
+                  <div className="collapse-content">
+                    <p>{item.content}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
       </div>
+
     </>
   )
 }
