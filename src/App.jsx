@@ -2,8 +2,8 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import { FaExternalLinkAlt, FaLightbulb, FaMoon, FaSearch, FaSun, FaUser } from 'react-icons/fa'
-import { FaSunPlantWilt } from 'react-icons/fa6';
+import { FaExternalLinkAlt, FaFacebook, FaGithub, FaInstagram, FaLightbulb, FaMoon, FaSearch, FaSun, FaUser } from 'react-icons/fa'
+import { FaSunPlantWilt, FaX } from 'react-icons/fa6';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import logo from './assets/alpha-logo.png';
@@ -330,7 +330,27 @@ function App() {
             </div>
           </div>
         </div>
+
+        <div className='text-center flex items-center justify-center'>
+          <div>
+            <h1>Alphaziments</h1>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam suscipit perspiciatis mollitia dolore dolorem illo.</p>
+            <div className='flex space-x-5 items-center justify-center'>
+              <FaGithub></FaGithub>
+              <FaFacebook></FaFacebook>
+              <FaX></FaX>
+              <FaInstagram></FaInstagram>
+            </div>
+            <hr />
+
+            <div>
+              <h1>Alpahziments</h1>
+              <h1>2024 &copy; All Rights Reserved</h1>
+            </div>
+          </div>
+        </div>
       </div>
+
 
     </>
   )
