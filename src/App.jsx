@@ -21,6 +21,11 @@ import 'daisyui/dist/full.css';
 
 
 function App() {
+  const [currentTheme, setCurrentTheme] = useState('theme-light');
+
+  const toggleTheme = () => {
+    setCurrentTheme(currentTheme === 'theme-dark' ? 'theme-light' : 'theme-dark');
+  };
   const [activeIndex, setActiveIndex] = useState(null);
 
   const toggleAccordion = (index) => {
@@ -109,7 +114,7 @@ function App() {
             <div className='flex space-x-2 items-center'>
               <div className='flex space-x-2 items-center mr-3'>
                 {/* <FaSun></FaSun> */}
-                <FaMoon className='shadow-2xl shadow-white border-dashed text-white border-1 border-gray-500 rounded-full p-2 w-[45px] h-[45px]'></FaMoon>
+                <FaMoon className={`shadow-2xl shadow-white border-dashed text-white border-1 border-gray-500 rounded-full p-2 w-[45px] h-[45px] bg-${currentTheme}-primary text-${currentTheme}-secondary`}></FaMoon>
                 <FaUser className='border-1 border-gray-400 rounded-md  w-[25px] h-[25px]'></FaUser>
               </div>
               <input className='input border-2 border-gray-600 bg-white' placeholder={`Search here ... `} type="text" name="" id="" />
@@ -349,6 +354,10 @@ function App() {
             </div>
           </div>
         </div>
+        <div className={`h-screen flex flex-col justify-center items-center bg-${currentTheme}-primary text-${currentTheme}-secondary`}>
+      <h1 className="text-4xl font-bold mb-4">Theme Switcher</h1>
+      <button className="btn btn-primary" onClick={toggleTheme}>Toggle Theme</button>
+    </div>
       </div>
 
 

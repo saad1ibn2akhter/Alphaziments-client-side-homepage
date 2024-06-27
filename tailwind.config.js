@@ -5,6 +5,9 @@ export default {
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
+  mode: 'jit',
+  purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
+  darkMode:false,
   theme: {
     extend: {
       fontFamily:{
@@ -19,6 +22,18 @@ export default {
         'hero-image':'url("https://i.ibb.co/3WrRPTp/waveNew.png")',
         'support-image':'url("https://nhb-verse-voyage.vercel.app/assets/contact-AWgNooiJ.png")',
         'feature-image':'url("https://i.ibb.co/GVdCBYj/Meteor-1.png")',
+      },
+      colors: {
+        'theme-light': {
+          primary: '#3490dc',
+          secondary: '#6cb2eb',
+          // Define other theme-light colors
+        },
+        'theme-dark': {
+          primary: '#4a5568',
+          secondary: '#718096',
+          // Define other theme-dark colors
+        },
       },
     },
   },
