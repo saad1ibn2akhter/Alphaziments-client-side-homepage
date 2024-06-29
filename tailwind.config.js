@@ -19,9 +19,11 @@ export default {
         'text-violet': '2px 2px 5px rgba(138, 43, 226, 0.5)', // Customize the shadow here
       },
       backgroundImage:{
-        'hero-image':'url("https://i.ibb.co/3WrRPTp/waveNew.png")',
+        'hero-image':'url("https://i.ibb.co/0hvgN2X/Sprinkle.png")',
+        'hero-image2':'url("https://i.ibb.co/WgkSQHW/Polygon-Luminary.png")',
         'support-image':'url("https://nhb-verse-voyage.vercel.app/assets/contact-AWgNooiJ.png")',
         'feature-image':'url("https://i.ibb.co/GVdCBYj/Meteor-1.png")',
+        'assignment-image':'url("https://i.ibb.co/F71vf2J/view-3d-school-desk.jpg")'
       },
       colors: {
         'theme-light': {
